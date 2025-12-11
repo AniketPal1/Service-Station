@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solzer Service Station - Our Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="services-style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-tools"></i>
+                <span>Solzer Service Station</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Your One-Stop Service Solution</h1>
+            <p>Quality services delivered right to your doorstep</p>
+            <button class="btn btn-hero" onclick="scrollToServices()">Explore Services</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Choose from our wide range of professional services</p>
+
+            <div class="services-grid">
+                <!-- House Cleaning Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>House Cleaning</h3>
+                    <p>Professional cleaning for your home, ensuring spotless and hygienic spaces</p>
+                    <div class="service-details">
+                        <span class="price">₹500 - ₹2000</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('House Cleaning', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('House Cleaning')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Electrical Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Electrical Service</h3>
+                    <p>Expert electrical repairs, installations, and maintenance solutions</p>
+                    <div class="service-details">
+                        <span class="price">₹300 - ₹1500</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Electrical Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Electrical Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Mechanical Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Mechanical Service</h3>
+                    <p>Professional maintenance and repair of appliances and machinery</p>
+                    <div class="service-details">
+                        <span class="price">₹400 - ₹1800</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Mechanical Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Mechanical Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Emergency Service -->
+                <div class="service-card emergency-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <h3>Emergency Service</h3>
+                    <p>24/7 emergency assistance for urgent home and personal needs</p>
+                    <div class="service-details">
+                        <span class="price">₹1000 - ₹5000</span>
+                        <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Emergency Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Emergency Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call urgent" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call Now</button>
+                    </div>
+                </div>
+
+                <!-- Property Dealing Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Property Dealing</h3>
+                    <p>Professional assistance for buying, selling, and renting properties</p>
+                    <div class="service-details">
+                        <span class="price">Negotiable</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Property Dealing', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Property Dealing')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Transportation Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Transportation</h3>
+                    <p>Safe and reliable transport services for travel and relocation</p>
+                    <div class="service-details">
+                        <span class="price">₹20/km</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Transportation', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Transportation')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Cloth Laundry Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shirt"></i>
+                    </div>
+                    <h3>Cloth Laundry</h3>
+                    <p>Professional dry cleaning and laundry service for all types of fabrics</p>
+                    <div class="service-details">
+                        <span class="price">₹30-₹100/pc</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Cloth Laundry', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Cloth Laundry')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Salon Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Men's & Women's Salon</h3>
+                    <p>Comprehensive salon services including haircut, styling, and treatments</p>
+                    <div class="service-details">
+                        <span class="price">₹200 - ₹1000</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Salon Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Salon Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Carpenter Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Carpenter Service</h3>
+                    <p>Expert carpentry work for furniture, repairs, and custom woodwork</p>
+                    <div class="service-details">
+                        <span class="price">₹600 - ₹3000</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Carpenter Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Carpenter Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Freelancer Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Freelancer Service</h3>
+                    <p>Professional freelance expertise in web design, content, and IT solutions</p>
+                    <div class="service-details">
+                        <span class="price">Custom Pricing</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Freelancer Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Freelancer Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Fresh Food Delivery Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Fresh Food Delivery</h3>
+                    <p>Fresh, healthy meals delivered to your home daily with quality assurance</p>
+                    <div class="service-details">
+                        <span class="price">₹100 - ₹500</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Fresh Food Delivery', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Fresh Food Delivery')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Library Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Library Service</h3>
+                    <p>Digital and physical library access with book rental and research assistance</p>
+                    <div class="service-details">
+                        <span class="price">₹50 - ₹500/month</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Library Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Library Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+
+                <!-- Other Services -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <h3>Other Services</h3>
+                    <p>Custom services tailored to your specific needs and requirements</p>
+                    <div class="service-details">
+                        <span class="price">Customizable</span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.5</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="btn btn-service" onclick="bookService('Custom Service', this)"><i class="fas fa-calendar-check"></i> Book Now</button>
+                        <button class="btn btn-secondary" onclick="viewDetails('Custom Service')"><i class="fas fa-info-circle"></i> Details</button>
+                        <button class="btn btn-call" onclick="callService('+91-9876543210')"><i class="fas fa-phone"></i> Call</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content booking-modal">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Service</h2>
+            <form id="bookingForm">
+                <input type="hidden" id="serviceName">
+                
+                <div class="form-group">
+                    <label>Service Name</label>
+                    <input type="text" id="modalServiceName" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="customerName" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+                    <input type="email" id="customerEmail" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="customerPhone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Date *</label>
+                    <input type="date" id="preferredDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Time *</label>
+                    <input type="time" id="preferredTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Address *</label>
+                    <textarea id="customerAddress" placeholder="Enter service location address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Additional Notes</label>
+                    <textarea id="additionalNotes" placeholder="Any additional information" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content success-modal">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Booking Confirmed!</h2>
+            <p id="successMessage"></p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <p class="about-text">
+                Solzer Service Station is your trusted partner for all household and professional services. 
+                With a team of experienced professionals, we ensure quality, reliability, and customer satisfaction 
+                in every service we provide. We're available 24/7 to serve you.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91-9876543210</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>support@solzer.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>123 Service Lane, City, State 12345</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Solzer Service Station. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="services-script.js"></script>
+</body>
+</html>
